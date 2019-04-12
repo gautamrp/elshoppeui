@@ -1,2 +1,6 @@
 # elshoppe
-Sample shopping project
+Sample Retail System
+
+
+
+
