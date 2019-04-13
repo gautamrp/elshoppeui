@@ -25,7 +25,7 @@ class AppHeader extends Component {
                                         <li>
                                             {isAdmin === 'ROLE_ADMIN' ? (
                                                     <div>
-                                                    <label>[[Welcome, {this.props.currentUser.name}]]</label>
+                                                    <label>[[&nbsp;&nbsp;Welcome, {this.props.currentUser.name}&nbsp;&nbsp;(Admin)&nbsp;&nbsp;]]</label>
                                                     <NavLink to="/manage">Manage</NavLink>
                                                     <NavLink to="/browse">Browse</NavLink>
                                                     </div>
@@ -36,7 +36,7 @@ class AppHeader extends Component {
 
                                             {isAdmin !== 'ROLE_ADMIN' ? (
                                                     <div>
-                                                    <label>[[Welcome, {this.props.currentUser.name}]]</label>
+                                                    <label>[[&nbsp;&nbsp;Welcome, {this.props.currentUser.name}&nbsp;&nbsp;(User)&nbsp;&nbsp;]]</label>
                                                     <NavLink to="/browse">Browse</NavLink>
                                                     </div>
                                                 ): (
