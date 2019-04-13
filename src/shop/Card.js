@@ -15,7 +15,9 @@ class Card extends Component {
     deleteSubmit(event) {
         deleteItem(this.props.item.itemId)
         .then(response => {
-            Alert.success("Successfully deleted the Item!");
+            Alert.success("Successfully deleted the Item!",{
+                timeout: 10000
+            });
         }).catch(error => {
             Alert.error((error && error.message) || 'Oops! Something went wrong. Please try again!');
         });

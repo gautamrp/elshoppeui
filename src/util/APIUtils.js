@@ -60,7 +60,7 @@ export function browseItems(page) {
 export function addItem(addItemRequest) {
     return request({
         url: API_BASE_URL + "/add",
-        method: 'POST',
+        method: 'PUT',
         body: JSON.stringify(addItemRequest)
     });
 }
