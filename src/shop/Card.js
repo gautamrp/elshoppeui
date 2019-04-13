@@ -49,7 +49,8 @@ class Card extends Component {
                 <div className="login-content">
                     <form onSubmit={this.deleteSubmit}>
                         <div>
-                            <div style={{ fontWeight: 'bold' }}><label>Item &nbsp; </label>{item.itemName}</div>
+                            <div style={{ fontWeight: 'bold' }}><label></label>{item.itemName}</div>
+                            <br></br>
                             <div className="form-item">
                                 <img alt="avatar" style={{ width: '250px' }} src={ require(`../img/content/${item.image}`)} />
                             </div>
