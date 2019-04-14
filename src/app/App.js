@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import {
-  Route,
-  Switch
-} from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import AppHeader from '../common/AppHeader';
 import Home from '../shop/Home';
 import Login from '../user/login/Login';
@@ -10,7 +7,6 @@ import Signup from '../user/signup/Signup';
 import Profile from '../user/profile/Profile';
 import Manage from '../shop/Manage';
 import Browse from '../shop/Browse';
-import OAuth2RedirectHandler from '../user/oauth2/OAuth2RedirectHandler';
 import NotFound from '../common/NotFound';
 import LoadingIndicator from '../common/LoadingIndicator';
 import { getCurrentUser } from '../util/APIUtils';
@@ -19,7 +15,7 @@ import PrivateRoute from '../common/PrivateRoute';
 import Alert from 'react-s-alert';
 import 'react-s-alert/dist/s-alert-default.css';
 import 'react-s-alert/dist/s-alert-css-effects/slide.css';
-import './App.css';
+import './App.css'; 
 
 class App extends Component {
   constructor(props) {
@@ -92,7 +88,6 @@ class App extends Component {
               render={(props) => <Login authenticated={this.state.authenticated} {...props} />}></Route>
             <Route path="/signup"
               render={(props) => <Signup authenticated={this.state.authenticated} {...props} />}></Route>
-            <Route path="/oauth2/redirect" component={OAuth2RedirectHandler}></Route>  
             <Route component={NotFound}></Route>
           </Switch>
         </div>
