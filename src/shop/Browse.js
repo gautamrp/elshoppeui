@@ -63,6 +63,15 @@ class Browse extends Component {
                 <a className="btn btn-primary"  onClick={() => this.limitPerPage(cp+1)}>Next</a>
               </div>
           )
+        } else if(cp === 1 && respCount < this.state.page_limit){
+            // show "Page X"
+            return (
+                <div>
+                  <a className="btn disabled">Back</a>
+                  &nbsp;&nbsp;&nbsp;&nbsp; <label>[[&nbsp;Page {(cp)}&nbsp;]]&nbsp;[[&nbsp;Items shown&nbsp;{respCount}&nbsp;]]</label> &nbsp;&nbsp;&nbsp;&nbsp;
+                  <a className="btn disabled">Next</a>
+                </div>
+            )
         } else {
           // show "Back", "Page X"
           return (
